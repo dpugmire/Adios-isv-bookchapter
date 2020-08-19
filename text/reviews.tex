@@ -1,0 +1,118 @@
+\section{Comments from reviewers}
+
+summary of changes needed:
+\begin{itemize}
+    \item Reviewer 1
+    \begin{itemize}
+        \item check list of simple TODOs
+        \item Unify with introduction terms, etc. in situ, in line, in transit
+        \item create space to address how ADIOS address the in situ challenges from the intro.
+        \item images for 3.1?
+    \end{itemize}
+ \item Reviewer 2
+    \begin{itemize}
+        \item intro figure to describe how ADIOS works
+        \item +/0/- of table is hard to read
+        \item this is ADIOS2, not ADIOS. (web page ref is fixed).
+        \item Fix listing 2 (spills over on pages)
+        \item integrate with introduction
+        \item integrate section 3 so it doesn't feel tacked on.
+    \end{itemize}   
+    
+\item Reviewer 3
+    \begin{itemize}
+        \item provide a top-down approach
+        \item intro: include a paragraph that describes the outline of hte chapter.
+        \item tighten 3.3
+        \item editing pass
+    \end{itemize}    
+    
+\end{itemize}
+
+\subsection{Editors summary}
+The paper received good scores from reviewers, and was recommended for publication, after some revisions, many of which are language and grammar issues. Among the more substantial problems, the structure of the manuscript should be refactored (this can be done without requiring much new writing) to provide a better reading flow, and the connection to the introductory chapter should be strengthened to avoid conflicting terminology. As a further possibility to improve the manuscript, the authors are encouraged to increase non-expert readability by adding bits of explanation and discussion throughout the text. Finally, the legibility of the tables should be improved. Addressing these points will allow acceptance of the paper into the book.
+
+
+\subsection{Review 1}
+SCORE: 2 (accept) \\
+
+Your score: 5 \\
+Justification: This chapter fits into the tools part of the book.
+
+\noindent\textbf{Accessibility} Your score: 4\\
+Justification: Motivation and impact are clear. However, there are few minor jargon and grammar issues for the authors to address:
+
+\begin{itemize}
+\item Section 1 lists the application names (e.g., Specfem3d\_globe, PIConGPU), which may not be clear to the readers of this book.
+\item Outline in Page 3 misses the description for Section 2.2.
+\item Page 10: first line (spat, temp, range, movement) needs to be omitted.
+\item \sout{Page 11: “.. data are note” -> data are not}
+\item \sout{age 16: “.. and the how ADIOS” -> and how ADIOS}
+\item \sout{Page 18: “..we lunch” -> we launch}
+\end{itemize}
+
+Response: Made these modifications.
+
+\noindent\textbf{Introductory material}  Your score: 1 \\
+Justification: There are some conflicting definitions with the introductory material: the intro defines in situ as “data is analyzed as it is generated”, but Section 2.3 further separates this into in situ and in transit. In addition to this, Section 2.3.3 mentions the in-line placement method which is in conflict with both the chapter itself and the introductory material.
+
+\noindent\textbf{Impact} Your score: 5\\
+
+Justification: This chapter summarizes one of the state-of-the-art in situ tools, ADIOS.  Overall, the chapter is well written and has a nice flow. My only remark for the authors would be allocating more space to discuss how ADIOS addresses some of the in situ related challenges as highlighted in the introductory material of the book. Some parts can be easily omitted to create a space for this. For instance, Section 2.3 can be shortened since it has some redundancy such as programmability and fault tolerance do not change depending on ADIOS/visualization perspective, hence, separate subsections for those seems redundant. Moreover, the comparison between the post hoc and in situ is given in the introductory material, and doing that here again would create another level of redundancy. Also, Listings 3 and 4 can be omitted since they are slight variations of Listings 1 and 2, which can be described in the same way that the authors described the difference between BPFile and SST!
+ modes by pointing out the required modifications at the specific line number (line #1 in this case).
+
+My final remark would be the lack of illustration regarding the use case in Section 3.1. It would be nice to have this as in other use cases in the chapter.
+
+
+\subsection{Review 2} SCORE: 1 (weak accept) \\
+
+\noindent\textbf{Accessibility} Your score: 3 \\
+
+Justification: The text dives in quickly to the details of ADIOS engines with little preamble or context of the broader ADIOS framework. An example workflow doesn’t come until figure 1 on page 9. Having an intro figure with a breakdown of the ADIOS components to frame the subsequent presentation in section 2 would help immensely.
+
+The +/0/- format of the tables is difficult to parse in general, and is especially difficult to make out on the Interactivity line of each, where the columns lack sufficient spacing. Consider making these two rows, as the row description text already is.
+
+It would help to specify that this chapter deals with ADIOS-2, as the ADIOS webpage itself mentions both versions and the chapter’s use of just “ADIOS” could be confusing to readers unfamiliar with the area.
+
+\sout{Typo: page 3- The abstraction used by ADIOS makes it easy to move data as it does something that the application is already doing. Namely, reading and writing from files.  -> The abstraction used by ADIOS makes it easy to move data as it does something that the application is already doing, namely, reading and writing from files.}
+
+Listing 2 is broken between pages 13-14.
+
+\noindent\textbf{Introductory material}
+
+Your score: 2
+Justification: The chapter makes no mention of the introductory chapter. This chapter could use an expanded introduction section that better sets the stage for in situ use and ties in the broader in situ considerations of the intro chapter to the specific I/O considerations handled by ADIOS.
+
+\noindent\textbf{Impact}
+
+Your score: 3
+Justification: This chapter presents ADIOS, a significant component of the DOE exascale strategy and a flexible system for managing both file system writes and data transfers among producers and consumers for in situ and in transit analysis contexts. That said, section 2 of the paper reads more like software documentation “man page” than a narrative presentation of the system. The coding examples are helpful for anyone looking to implement ADIOS for their simulation, but there is similar content available at the ADIOS-2 documentation site (https://adios2.readthedocs.io/en/latest/index.html) . Section 3 provides helpful examples of in situ use of ADIOS, but these feel tacked on to the end rather than an integral part of the chapter. The chapter would be more successful if these motivating examples were introduced at the beginning and ADIOS examples and feature discussions were motivated by these throughout, with references to the online docs (or other ADIOS papers) for a
+more complete discussion of the feature set.
+
+
+\subsection{Review 3}
+SCORE: 2 (accept)
+
+Justification: ADIOS is clearly highly relevant to ISVFCS based on its long history, number of users, ECP presence, and several standout “hero” use cases described in this chapter. There is no question that it will be included in the book. The submission clearly fits the tools category.
+
+\noindent\textbf{Accessibility}
+
+Your score: 3
+Justification: The writing needs improvement. Below are some specific suggestions.
+
+- The presentation should be organized in a top-down, summary-to-details fashion. E.g., the abstract dives right into details, with the last sentence actually being a better opening sentence. This pattern of bottom-up instead of top-down writing pervades the chapter, with closing sentences in several sections belonging at the start of the sections. Even the level of sections, the conclusion is a better summary of the chapter than the abstract, I think. The introduction could also use a paragraph that outlines the structure of the rest of the chapter.
+- Various terms and acronyms need to be defined before they are used. Readers not from the DOE community do not know the names of codes or machines, e.g.
+- Tables 1 and 2 appear in the programmability subsections, but they apply to the parent section instead.
+- Various typos, grammar, and capitalization errors exist, which will require a detailed editing pass.
+- I find the style of the writing not quite polished. Some of the sentences are too short, simplistic, and lack variety. Some other sections (3.3) are long and rambling and should be tightened. Some words and phrases are too casual and not scientific or specific enough (e.g., “a couple of general guidelines…”). The current state of the chapter  is acceptable for a first draft, but ought to be improved before publication.
+
+\noindent\textbf{Introductory material}
+
+Your score: 3
+Justification: The terminology in this chapter is inconsistent with the terminology of the introductory chapter: ADIOS uses “in situ” and “in transit” rather than time and space division. This contradicts the meaning of in situ in the book, which encompasses in transit. The editors will need to decide what is the best strategy here. I suggest that it’s ok for ADIOS to continue to use their terminology consistent with their other publications, but explain the mapping between their terms and the introduction’s, before using their own. Also, in some places they mix “in situ” with “inline,” and they also mention hybrids but do not elaborate. At a minimum, they should be self-consistent in their terminology. Also, Section 2.3 presents general tradeoffs between in situ and in transit (i.e., time and space division) that are not specific to ADIOS and feel like they belong in the introductory material.
+
+\noindent\textbf{Impact}
+
+Your score: 5
+Justification: The chapter is a summary of previous work. The impact is that the chapter provides a single source for a high-level overview of the system as well as numerous references where readers can find more details. The description of the various engines, schemas, and use cases is informative and beneficial.
+
